@@ -15,9 +15,11 @@ connectToMongoDb("mongodb://127.0.0.1:27017/short-url").then(() =>
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 
+//Middlewares 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+//telling the app that if any route starts with any below mentioned symbol then which route we have to use 
 app.use("/", staticRoute);
 app.use("/url", urlRoute);
 
