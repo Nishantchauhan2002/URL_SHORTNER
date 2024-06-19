@@ -1,3 +1,5 @@
+//we can use nanoid also in place of short id
+
 const express = require("express");
 const { connectToMongoDb } = require("./connect");
 const path = require("path");
